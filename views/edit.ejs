@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Node.js CRUD app with MySQL</title>
+  </head>
+  <body>
+    <h1>Edit User</h1>
+    <form method="post" action="/edit/<%= user.id %>">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" value="<%= user.name %>"><br>
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" value="<%= user.email %>"><br>
+      <label for="phone">Phone:</label>
+      <input type="text" id="phone" name="phone" value="<%= user.phone %>"><br>
+      <input type="submit" value="Save">
+    </form>
+  </body>
+</html>

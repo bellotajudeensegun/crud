@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Node.js CRUD app with MySQL</title>
+  </head>
+  <body>
+    <h1>Users</h1>
+    <a href="/add">Add User</a>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <% users.forEach(function(user) { %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+          <td><%= user.phone %></td>
+          <td><a href="/edit/<%= user.id %>">Edit</a></td>
+          <td><a href="/delete/<%= user.id %>" onclick="return confirm('Are you sure?')">Delete</a></td>
+        </tr>
+      <% }) %>
+    </table>
+  </body>
+</html>
